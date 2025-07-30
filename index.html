@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Legris Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-title">David Legris Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#maps">Maps</a></li>
+        <li><a href="#web-map">Applications</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#quick-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="introduction" class="section">
+    <div class="intro-container">
+      <div class="intro-photo">
+        <img src="photos/david.JPG" alt="A photo of David!" />
+      </div>
+      <div class="intro-text">
+        <h2>About Me</h2>
+        <p>David Legris is a GIS professional living in Burnaby, British Columbia with an interst in data management and application development. Previously, David worked with the City of Winnipeg Insect Control Branch, before moving to Thailand, where he taught English for 5 years. Having returned, David now enjoys writing with GoGeomatics Canada, and has recently been spending his time improving his JavaScript skills.</p> 
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="education-container">
+      <h2>Education</h2>
+      <p>David studied Environmental Science at the University of Manitoba, where he focused on topics related to sustainable development. During his studies, David completed an <a href="assets/Thesis.pdf">honours thesis</a> research project comparing mosquito characteristics, neighbourhood composition, land cover and public opinion in relation to the City of Winnipeg's adult mosquito control program. The purpose of this project was to better understand the factors driving treatment decisions.</p>
+      <br>
+      <p>Later, David completed the GIS Advanced Diploma Program with BCIT, providing a strong foundation in GIS principles and methodology. During this program, David developed skills including spatial analysis, data management, application design, automation and other topics related to GIS software, data and infrastructure. David completed a practicum placement with <i>United Way Centraide Canada</i>, where he created a Leaflet-based web map application for internal data visualization, along with automation scripts and user documentation.</p>
+    </div>
+  </section>
+
+  <section id="maps" class="section">
+    <h2>Maps</h2>
+    <div class="maps-container">
+      <div class="map-item">
+        <a href="assets/Ireland.pdf" target="_blank">
+          <img src="photos/map1.jpg" alt="Ireland Archaeology Sites PDF" />
+          <p>Ireland Archaeology Sites</p>
+        </a>
+      </div>
+      <div class="map-item">
+        <a href="assets/Smartville.pdf" target="_blank">
+          <img src="photos/map2.jpg" alt="Smartville PDF" />
+          <p>Smartville Rapid Transit Routes</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="web-map" class="section">
+    <h2>Web Map Application</h2>
+    <div class="web-map-container">
+      <h3>Via Rail Router and Tourism App</h2>
+      <a href="https://davidlegris.github.io/via-rail-app/" target="_blank">
+        <img src="photos/webmap-preview.jpg" alt="Web Map Preview" />
+        <p>Click to open the Web Map Application</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="publications" class="section">
+    <div class="publications-container">
+        <h2>Publications</h2>
+        <ul class="publication-list">
+          <li><a href="https://gogeomatics.ca/key-environmental-mapping-initiatives-shaping-canadas-geospatial-landscape/">Key Environmental Mapping Initiatives Shaping Canada’s Geospatial Landscape</a></li>
+          <li><a href="https://gogeomatics.ca/lidar-canex-2025-aviation-safety-101-aircraft-selection-and-job-safety/">Lidar CANEX 2025: Aviation Safety 101 – Aircraft Selection and Job Safety</a></li>
+          <li><a href="https://gogeomatics.ca/securing-canadas-water-resources-in-a-changing-world/">Securing Canada’s Water Resources in a Changing World</a></li>
+          <li><a href="https://gogeomatics.ca/why-a-u-s-mapping-program-is-gaining-bipartisan-support-amid-research-funding-cuts/">Why a U.S. Mapping Program Is Gaining Bipartisan Support Amid Research Funding Cuts</a></li>
+          <li><a href="https://gogeomatics.ca/urisa-bc-no-more-geoconnects-debut-conference/">URISA BC No More – GeoConnect’s Debut Conference</a></li>
+          <li><a href="https://gogeomatics.ca/ccmeo-student-hackathon-results-building-resilience-with-geo-ca/">CCMEO Student Hackathon Results: Building Resilience with GEO.ca</a></li>
+          <li><a href="https://gogeomatics.ca/advancing-open-source-gis-qgis-user-conference-2024-recap/">Advancing Open-Source GIS: QGIS User Conference 2025 Recap</a></li>
+          <li><a href="https://gogeomatics.ca/how-to-bridge-reality-and-digital-space-a-conversation-with-john-hale/">How to Bridge Reality and Digital Space – A Conversation with John Hale</a></li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="quick-contact">
+  <div class="quick-contact-buttons">
+    <button onclick="sendEmail()">Email</button>
+    <button onclick="openLinkedIn()">LinkedIn</button>
+  </div>
+  <div class="contact-container">
+    <a href="your-cv.pdf" download class="cv-button">Download My CV</a>
+  </div>
+  </section>
+
+  
+</body>
+
+<script>
+  // Base64-encoded contact info
+  const encodedEmail = "ZGF2aWQubGVncmlzQGhvdG1haWwuY29t";
+  const encodedLinkedIn = "aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2RhdmlkLWxlZ3Jpcy03YjMzOTMzMzIv";
+
+  // Decode
+  const email = atob(encodedEmail);
+  const linkedin = atob(encodedLinkedIn);
+
+  function sendEmail() {
+    window.location.href = `mailto:${email}`;
+  }
+
+  function openLinkedIn() {
+    window.open(linkedin, '_blank');
+  }
+</script>
+
+</body>
+</html>
